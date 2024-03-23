@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel = "stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+    <header class="header">
+        <nav class="nav container">
+            <a class="nav__logo" href="#">Pruek</a>
+            <div class="nav__menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a class="nav__link active-link" href="home" onclick="scrollToSection('home')">
+                            <i class="uil uil-home nav__icon"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="about" onclick="scrollToSection('about')">
+                            <i class="uil uil-user nav__icon"></i>
+                            About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="portfolio" onclick="scrollToSection('portfolio')">
+                            <i class="uil uil-scenery nav__icon"></i>
+                            Portfolio
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="contact" onclick="scrollToSection('contact')">
+                            <i class="uil uil-message nav__icon"></i>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <i class="uil uil-times nav__close" onclick="CloseMenu()"></i>
+
+            </div>
+            <div class="nav__toggle" onclick="ToggleMenu()">
+                <i class="uil uil-apps"></i>
+
+            </div>
+
+        </nav>
+    </header>
+
+</head>
+<body>
+    <div class="home__container container grid" id="home">
+        <div class="home__content grid">
+            <div class="home__social">
+                <a class="home__social-icon" target="_blank" href="http://www.linkedin.com/in/suphanat-panyakom-1483522bb">
+                    <i class="uil uil-linkedin-alt"></i>
+                </a>
+                <a class="home__social-icon" target="_blank" href="https://github.com/prueksasuphanat">
+                    <i class="uil uil-github-alt"></i>                
+                </a>
+                <a class="home__social-icon" target="_blank" href="https://www.instagram.com/py24.7/">
+                    <i class="uil uil-instagram"></i>
+                </a>
+            </div>
+                
+                <div class="home__img"></div> 
+
+                <div class="home__data">
+                    <h1 class="home__title">Hello, I'm Pruek 👋</h1>
+                    <h3 class="home__subtitle">Suphanat Panyakom</h3>
+                    <p class="home__description">I live in Chiang Mai and I'm interested in front-end developer.</p>
+
+                </div>
+
+        </div>
+    </div>
+    <div class="about section" id="about">
+        
+        <h2 class="section__title">About Me</h2>
+        <div class="about__container container grid">
+            <img src="/Task1/images/IMG_7121.jpg" alt="" class="about__img"/>
+            <div class="about__data">
+
+                <div class="about__info grid">
+                
+                    <div class="about__box">
+                        <i class="material-symbols-outlined about__icon">
+                            editor_choice
+                        </i>
+                        <h3 class="about__title">Experience</h3>
+                        <span class="about__subtitle">0 Years Working</span>
+                    </div>
+                    <div class="about__box">
+                        <i class="material-symbols-outlined about__icon">
+                            business_center
+                        </i>
+                        <h3 class="about__title">Complete</h3>
+                        <span class="about__subtitle">2 Projects</span>
+                    </div>
+                    <div class="about__box">
+                        <i class="material-symbols-outlined about__icon">
+                            school
+                        </i>
+                        <h3 class="about__title">Education</h3>
+                        <span class="about__subtitle"> B.Eng.,M.Eng.IE</span>           
+                    </div>            
+                </div>
+                <div class="about__description">
+                    <p>Suphanat Panyakom</p>
+                    <p>Age: 26</p>
+                    <p>Date of Birth: 09.05.1997</p>
+                </div>
+                <a download="" href={CV} class="button button--flex about__btn">Download CV<span class="material-symbols-outlined">
+                    description
+                </span></a>
+            </div>
+        </div>
+    </div>
+    <div class="skill section" >
+        <h2 class="section__title">Skills</h2>
+        <div class="skills__container container grid">
+            <div class="skills__content">
+                <h3 class="skills__title">Frontend developer</h3>
+                <div class="skills__box">
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">Html</h3>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">Css</h3>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                        
+                            <div>
+                                <h3 class="skills__name">Javascript</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>      
+                            <div>
+                                <h3 class="skills__name">React</h3>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                        
+                            <div>
+                                <h3 class="skills__name">Bootstrap</h3>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>                       
+                            <div>
+                                <h3 class="skills__name">Typescript</h3>
+                            </div>
+                        </div>   
+                    </div>      
+                </div>
+            </div>
+            <div class="skills__content">
+                <h3 class="skills__title">Other</h3>
+                <div class="skills__box">
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">Python</h3>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div>
+                                <h3 class="skills__name"></h3>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                        
+                            <div>
+                                <h3 class="skills__name"></h3>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                        
+                            <div>
+                                <h3 class="skills__name">Photoshop</h3>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                        
+                            <div>
+                                <h3 class="skills__name"></h3>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                        
+                            <div>
+                                <h3 class="skills__name"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="education section">
+        <h2 class="section__title">Education & Experience</h2>
+
+        <div class="education__container container">
+            <div class="education__tabs">
+                <div class="education__button button--flex education__btn--education " onclick="toggleContent('education')">
+                    <i class="uil uil-graduation-cap  education__icon" 
+                     ></i>Education
+                </div>
+                <div class="education__button button--flex education__btn--experience" onclick="toggleContent('experience')" >
+                    <i class="uil uil-briefcase-alt education__icon"
+                    ></i>Experience
+                </div>
+            </div>
+            <div class="education__sections">
+                <div class="education__content education__content--experience">
+                    <div class="education__data">
+                        <div>
+                            <h3 class="education__title">Road to Frontend Developer Bootcamp #2</h3>
+                            <span class="education__subtitle">Certificate-BorntoDev</span>
+                            <div class="education__calender">
+                                <i class="uil uil-calendar-alt"></i> 2023 - 2024
+                            </div>
+                        </div>
+                        <div>
+                            <span class="education__rounder">
+                            </span>
+                            <span class="education__line">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="education__data">
+                        <div></div>
+                        <div>
+                            <span class="education__rounder">
+                            </span>
+                            <span class="education__line">
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="education__title">Dev Init Project</h3>
+                            <span class="education__subtitle">BorntoDev</span>
+                            <div class="education__calender">
+                                <i class="uil uil-calendar-alt"></i> 2024 - present
+                            </div>
+                        </div>              
+                    </div>             
+                </div>
+                <div class="education__content-active education__content--education">
+                    <div class="education__data">
+                        <div class="education__info">
+                            <h3 class="education__title">High School</h3>
+                            <span class="education__subtitle">Phadungpanya <br>(Tak,Thailand)</span>
+                            <div class="education__calender">
+                                <i class="uil uil-calendar-alt"></i> 2023 - 2024
+
+                            </div>
+                        </div>
+                        <div >
+                            <span class="education__rounder">
+                            </span>
+                            <span class="education__line">
+                            </span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="education__data">
+                        <div></div>
+                        <div class="line">
+                            <span class="education__rounder">
+                            </span>
+                            <span class="education__line">
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="education__title">B.Eng<br>(Industrial Engineering)</h3>
+                            <span class="education__subtitle">ChiangMai <br> University</span>
+                            <div class="education__calender">
+                                <i class="uil uil-calendar-alt"></i> 2015 - 2019
+                            </div> 
+                        </div>                             
+                    </div>                        
+                    <div class="education__data">                                                        
+                        <div>
+                            <h3 class="education__title">M.Eng<br>(Industrial Engineering)</h3>
+                            <span class="education__subtitle">ChiangMai<br>University</span>
+                            <div class="education__calender">
+                                <i class="uil uil-calendar-alt"></i> 2019 - 2023
+                            </div>                            
+                        </div> 
+                        <div class="line">                            
+                            <span class="education__rounder">
+                            </span>
+                            <span class="education__line">
+                            </span>
+                        </div>                                                                 
+                    </div>                                   
+                </div>                   
+            </div>           
+       </div>
+    </div> 
+
+    <div class="portfolio section" id="portfolio">
+        <h2 class="section__title">Portfolio</h2>
+        <div class="portfolio__container container grid">
+            <div class="portfolio__img">
+                <img src="/Task1/images/demo1.png"/>
+            </div>
+            <div class="portfolio__content">
+                
+                <h3 class="portfolio__title">Online course 🎓</h3>
+                <p class="portfolio__description">A online course website that allows user to learn about programming.This project is intended to practice web development using React and utilizing APIs.  </p>
+                <div class="portfolio__subtitle">
+                    <span>React</span>
+                    <span>Css</span>
+                    <span>Typescript</span>
+                </div>
+                <div class="portfolio__link">
+                    <a href="https://github.com/prueksasuphanat/Final-Project" class="contact__button portfolio__button"><i class='bx bxl-github portfolio__icon' ></i>Code<i class="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                    <a href="" class="contact__button portfolio__button"><i class='bx bx-code-alt portfolio__icon'></i>Demo<i class="bx bx-right-arrow-alt contact__button-icon"></i></a>    
+                </div>
+
+         
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="Contact section" id="contact">
+        <h2 class="section__title">Contact Me</h2>
+        <div class="contact__container container grid">
+            <div class="contact__content">
+                <h3 class="contact__title">Talk to me</h3>
+                    <div class="contact__info" >
+                        <div class="contact__card">
+                            <i class="bx bx-mail-send contact__card-icon"></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">suphanat.pruek@gmail.com</span>
+
+                            <a href="" class="contact__button">Write me<i class="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                        </div>
+                        <div class="contact__card">
+                            <i class="bx bx-phone-call contact__card-icon "></i>
+                            <h3 class="contact__card-title">Phone</h3>
+                            <span class="contact__card-data">098-669-9033</span>
+
+                            <a href="" class="contact__button">Write me<i class="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                        </div>
+                        <div class="contact__card">
+                            <i class='bx bxl-discord-alt bx-tada contact__card-icon' ></i>
+                            <h3 class="contact__card-title">Discord</h3>
+                            <span class="contact__card-data">suphanat.pruek@gmail.com</span>
+
+                            <a href="https://www.discordapp.com/users/389665555906297856" class="contact__button">Write me<i class="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                        </div>
+
+                    </div>
+
+            </div>
+            <div class="contact__content">
+                <h3 class="contact__title">Write somthing to me</h3>
+                <form class="contact__form">
+                    <div class="contact__form-div">
+                        <label class="contact__form-tag">Name</label>
+                        <input type = "text" name="name" class="contact__form-input" placeholder="Insert your name." />
+
+                    </div>
+                    <div class="contact__form-div">
+                        <label class="contact__form-tag">Mail</label>
+                        <input type = "email" name="email" class="contact__form-input" placeholder="Insert your email." />
+
+                    </div>
+                    <div class="contact__form-div contact__form-area">
+                        <label class="contact__form-tag">Something</label>
+                        <textarea name="" id="" cols="30" row="10" 
+                        class="contact__form-input" placeholder="Write something."></textarea>
+
+                    </div>
+                    
+                <a class="button button--flex about__btn">Send Message<span class="material-symbols-outlined">send</span></a>
+                </form>
+
+
+
+            </div>
+
+
+        </div>
+            
+    </div>
+  
+</body>
+<footer class="footer">
+    <div class="footer__container container">
+        <h1 class="footer__title">Pruek</h1>
+        <ul class="footer__list">
+            <li>
+                <a href="#home" class="footer__link">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="footer__link">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="#portfolio" class="footer__link">
+                    Portfolio
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="footer__link">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+        <div class="footer__social">
+            <a href="" class="footer__social-link" target="_blank" href="https://www.facebook.com/suphanat.panyakom/">
+                <i class="bx bxl-facebook"></i>
+            </a>
+
+            <a href="" class="footer__social-link" target="_blank" href="https://www.instagram.com/py24.7/">
+                <i class="uil uil-instagram"></i>
+            </a>
+        </div>
+
+
+    </div>
+
+        <a href="#" class="scrollup" onclick="Scrollup(event)">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
+    </div>
+
+
+</footer>
+
+</html>
