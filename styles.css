@@ -643,6 +643,7 @@ img{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     column-gap: 4rem;
+    padding-bottom: 4rem;
 }
 .portfolio__content{
     display: flex;
@@ -658,6 +659,8 @@ img{
 
 .portfolio__subtitle{
     font-weight: var(--font-medium);
+    display: flex;
+    gap: 2rem;
 }
 .portfolio__description{
     font-size: var(--normal-font-size)
