@@ -1,26 +1,184 @@
-[
-    {
+{
+    "blog": [
+      {
         "id": 1,
-        "title": "หัวข้อบล็อกที่หนึ่ง",
-        "description": "เนื้อหาบล็อกที่หนึ่ง",
-        "coverpic": "url_ภาพปก_บล็อกที่หนึ่ง.jpg",
-        "name": "ชื่อผู้เขียนบล็อกที่หนึ่ง",
-        "tags": ["tag1", "tag2", "tag3"]
-    },
-    {
+        "title": "How to Learn JavaScript",
+        "category": "Programming",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "John Doe",
+        "views": 1200,
+        "date": "2024-04-07"
+      },
+      {
         "id": 2,
-        "title": "หัวข้อบล็อกที่สอง",
-        "description": "เนื้อหาบล็อกที่สอง",
-        "coverpic": "url_ภาพปก_บล็อกที่สอง.jpg",
-        "name": "ชื่อผู้เขียนบล็อกที่สอง",
-        "tags": ["tag2", "tag4"]
-    },
-    {
+        "title": "Tips for Healthy Living",
+        "category": "Health",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "Jane Doe",
+        "views": 800,
+        "date": "2024-04-06"
+      },
+      {
         "id": 3,
-        "title": "หัวข้อบล็อกที่สาม",
-        "description": "เนื้อหาบล็อกที่สาม",
-        "coverpic": "url_ภาพปก_บล็อกที่สาม.jpg",
-        "name": "ชื่อผู้เขียนบล็อกที่สาม",
-        "tags": ["tag1", "tag3", "tag5"]
-    }
-]
+        "title": "The Art of Cooking",
+        "category": "Food",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "Suphanat",
+        "views": 1500,
+        "date": "2024-04-05"
+      },
+      {
+        "id": 4,
+        "title": "Traveling on a Budget",
+        "category": "Travel",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "John Doe",
+        "views": 600,
+        "date": "2024-04-04"
+      },
+      {
+        "id": 5,
+        "title": "Effective Time Management",
+        "category": "Productivity",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "Jane Doe",
+        "views": 2000,
+        "date": "2024-04-03"
+      },
+      {
+        "id": 6,
+        "title": "Introduction to Machine Learning",
+        "category": "Technology",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "Suphanat",
+        "views": 2200,
+        "date": "2024-04-02"
+      },
+      {
+        "id": 7,
+        "title": "Yoga for Beginners",
+        "category": "Health",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "Jane Doe",
+        "views": 1000,
+        "date": "2024-04-01"
+      },
+      {
+        "id": 8,
+        "title": "Financial Planning 101",
+        "category": "Finance",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "John Doe",
+        "views": 1700,
+        "date": "2024-03-31"
+      },
+      {
+        "id": 9,
+        "title": "Photography Basics",
+        "category": "Art",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "Suphanat",
+        "views": 1300,
+        "date": "2024-03-30"
+      },
+      {
+        "id": 10,
+        "title": "Gardening Tips",
+        "category": "Hobby",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "John Doe",
+        "views": 900,
+        "date": "2024-03-29"
+      },
+      {
+        "id": 11,
+        "title": "10 Essential Cooking Techniques",
+        "category": "Food",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "Jane Doe",
+        "views": 1400,
+        "date": "2024-03-28"
+      },
+      {
+        "id": 12,
+        "title": "Solo Travel Adventures",
+        "category": "Travel",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "John Doe",
+        "views": 1100,
+        "date": "2024-03-27"
+      },
+      {
+        "id": 13,
+        "title": "Mastering Your Mindset for Success",
+        "category": "Productivity",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "Suphanat",
+        "views": 2000,
+        "date": "2024-03-26"
+      },
+      {
+        "id": 14,
+        "title": "DIY Home Decor Ideas",
+        "category": "Hobby",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "Jane Doe",
+        "views": 900,
+        "date": "2024-03-25"
+      },
+      {
+        "id": 15,
+        "title": "The Power of Meditation",
+        "category": "Health",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "John Doe",
+        "views": 1800,
+        "date": "2024-03-24"
+      },
+      {
+        "id": 16,
+        "title": "Exploring Street Food Around the World",
+        "category": "Food",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "Jane Doe",
+        "views": 1500,
+        "date": "2024-03-23"
+      },
+      {
+        "id": 17,
+        "title": "Building Strong Relationships: A Guide",
+        "category": "Relationships",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "John Doe",
+        "views": 1300,
+        "date": "2024-03-22"
+      },
+      {
+        "id": 18,
+        "title": "Understanding Cryptocurrency Basics",
+        "category": "Finance",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "Suphanat",
+        "views": 1600,
+        "date": "2024-03-21"
+      },
+      {
+        "id": 19,
+        "title": "Fitness Fundamentals for Beginners",
+        "category": "Health",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "Jane Doe",
+        "views": 1000,
+        "date": "2024-03-20"
+      },
+      {
+        "id": 20,
+        "title": "Art of Writing: Crafting Compelling Stories",
+        "category": "Writing",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!",
+        "author": "John Doe",
+        "views": 1900,
+        "date": "2024-03-19"
+      }
+    ]
+}

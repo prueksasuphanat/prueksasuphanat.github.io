@@ -14,7 +14,7 @@
         <nav class="nav nav__container ">
             
             <div class="navbar-logo-div">
-                <a class="nav__logo" href="#">Personal Blog</a>
+                <a class="nav__logo" href="/home.html">Personal Blog</a>
                 <input type="checkbox" id="toggleDarkmode" onclick="Darkmode()">
             </div>
             <div class="nav__menu ">
@@ -27,6 +27,8 @@
                         </a>
                     </li>
 
+
+
                     <li class="nav__item">
                         <a class="nav__link" href="/createblog.html" >
                             <i class="uil uil-scenery nav__icon"></i>
@@ -37,6 +39,11 @@
                         <a class="nav__link" href="/proflie.html" >
                             <i class="uil uil-message nav__icon"></i>
                             Profile
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" >
+                            <i class=""></i>
                         </a>
                     </li>
 
@@ -141,84 +148,83 @@
         <div class="blog__content container">
             
             <div class="blog__data">
-                <div class="blog__header ">
-                    <h1 class="blog__header-title">Lastest Blog</h1>
-                    <a class="blog__header-seeall">see all</a>
+                <div class="blog__header">
+                    <div class="blog__header-div">
+                        <div>
+                            <h1 class="blog__header-title">Popular Blog</h1>
+                            <div class="blog__available">
+                                <p>Blog available</p>
+
+                            </div>
+
+
+                        </div>
+                        <div class="sortby-icon" id="searchSort" onclick="toggleForm()">
+                            <span class="material-symbols-outlined">sort</span>
+
+                            <p class="sort-text">
+                                sort by
+                            </p>
+                            <div class="searchsort-icon">
+                                <ul class="searchsort">
+                                    <li value="views" id="views" onclick="sortBlogsByViews()">Top view</li>
+                                    <li value="author" id="author" onclick="sortBlogsByAuthor()">Author</li>
+                                </ul>
+
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
                 </div>
                 <div class="search__bar">
-                    <form class="search__form" role ="search">
+                    <form class="search__form" role ="search" >
                         <label class="search__label" for="search">Search for stuff</label>
                         <input class="search__intput" id="search" type="search" placeholder="Search..." autofocus required />
-                        <button class="search__btn" type="submit">Go</button>    
+                        <button class="search__btn" type="submit" >Go</button>    
                     </form>
+                    
+                    
+                    
                 </div>
-                <div class="blog__post">
-                    <div class="blog__card">
-                        <div  class="card">
-                            <img class="coverpic" src="images/cover1.jpg"/>
-                            <div class="card__content">
-                                <h3 class="card__title">Header 1</h3>
-                                <div class="ellipsis">
-                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!</p>
-                                </div>
-                                <div class="card__tag">
-                                    <p class="tag">#lastes</p>
-                                    <p class="tag">#education</p>
-                                </div>
-                                <div class="card__author">
-                                    <img class="avatar" src="images/avatar.jpg"/>
-                                    <div class="card__author-content">
-                                        <p class="author">Supanat Panyakom</p>
-                                        <p class="author__date">March 26 2024<span class="material-symbols-outlined card__icon">
-                                            schedule
-                                        </span></p>
-                                    </div>
-                                </div>
-                            </div> 
-                        </div>
-                        <div  class="card">
-                            <img class="coverpic" src="images/cover1.jpg"/>
-                            <div class="card__content">
-                                <h3 class="card__title">Header 2</h3>
-                                <div class="ellipsis">
-                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!</p>
-                                </div>
-                                <div class="card__tag">
-                                    <p class="tag">#lastes</p>
-                                    <p class="tag">#education</p>
-                                </div>
-                                <div class="card__author">
-                                    <img class="avatar" src="images/avatar.jpg"/>
-                                    <div class="card__author-content">
-                                        <p class="author">Supanat Panyakom</p>
-                                        <p class="author__date">March 26 2024<span class="material-symbols-outlined card__icon">
-                                            schedule
-                                        </span></p>
-                                    </div>
-                                </div>
-                            </div> 
-                        </div>
-
+                <div class="blog__post ">
+                    <div class="blog__card filter-items">
+                        
+                        
+                        
                     </div>
                     
                     <div class="tags__section">
                         <h1 class="tags__header">Tags</h1>
-                        <div class="card__tag">
-                            <p class="tag">#lastes</p>
-                            <p class="tag">#education</p>
+                        <div class="card__tag-tags">
+                            <a class="tag" id="Technology">#Technology</a>
+                            <a class="tag" id="Productivity">#Productivity</a>
+                            <a class="tag" id="Writing">#Writing</a>
+                            <a class="tag" id="Health">#Health</a>
+                            <a class="tag" id="Finance">#Finance</a>
+                            <a class="tag" id="Food">#Food</a>
+                            <a class="tag" id="Art">#Art</a>
+                            <a class="tag" id="Relationships">#Relationships</a>
+                            <a class="tag" id="Programming">#Programming</a>
+                            <a class="tag" id="Travel">#Travel</a>
+                            <a class="tag" id="Health">#Health</a>
+                            <a class="tag" id="Hobby">#Hobby</a>
                         </div>
                     </div>
+                    
 
                 </div>
+                <div class="load__more">
+                    <button class="button" onclick="loadMore()">
+                        Load more
+    
+                    </button>
+                </div>
+                
             </div>
             
 
-            <div class="load__more">
-                <button class="button">
-                    Load more
-
-                </button>
-            </div>
+            
         </div>
 
     </div>
@@ -266,4 +272,8 @@
 
 
 </footer>
+<script>
+
+
+</script>
 </html>
