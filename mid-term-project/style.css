@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Dancing+Script&family=Roboto:wght@300;400;500&display=swap');
+
+:root{
+  --primary-color : #242424;
+  --logo-font:'DM Serif Display', serif;
+  --primary-font: 'Roboto', sans-serif;
+  --image-font: 'Dancing Script', cursive;
+
+}
+
+.container h1 {
+  text-align: center;
+  
+}
+
+/* Header */
+.cart{
+  background-color: rgb(205, 205, 205);
+  padding: 0 3px;
+  border-radius: 10px;
+  font-size: 12px;
+  position: relative;
+  top:-7px;
+  right: 10px;
+}
+
+header{
+  background-color: white;
+}
+.logo{
+  font-family: var(--logo-font);
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  margin: auto;
+}
+nav a{
+  font-family:'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  position: relative;
+  text-emphasis: none;
+  text-decoration: none;
+
+  
+}
+
+nav a::after{
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+  background-color: var(--primary-color);
+}
+
+nav a:hover::after{
+  width: 100%;
+  border-radius: 3px;
+  
+}
+.filter-btn{
+  border: none;
+  background-color: white;
+}
+
+
+/* New Slidebar */
+.carousel-item{
+  size: 50%;
+}
+
+/*breadcrumb*/
+.breadcrumb-head{
+  font-size: 12px;
+
+}
+
+/* Product Card*/
+.container-product{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+
+}
+
+
+
+.container-product img{
+  width: 305px;
+  
+}
+
+.discout{
+  position: absolute;
+  right: 20px;
+  top: 0px;
+  color: white;
+  background-color: #DC143C;
+  padding: 30px 10px;
+  font-size: 20px;
+}
+
+.product{
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+
+
+.product-img .rear-img{
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s ease-out;
+
+}
+.product:hover .rear-img{
+  opacity: 1;
+  z-index: 0;
+  
+ 
+}
+
+.product-info{
+  padding: 1.2rem 1.2rem 1.2rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns:auto auto;
+  justify-content: space-between;
+
+  
+}
+
+.product-name{
+  font-size: 20px;
+  font-family: var(--primary-font);
+  font-style: bold;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.product-info div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body p2{
+  font-size: 12px;
+}
+
+.border-top{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.flip{
+  transform: scaleX(-1);
+
+}
+
+.filter-btns{
+  text-align: center;
+
+}
+
+.card.hide{
+  display: none;
+}
+
+.old-price{
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+/*Product detail page*/
+
+.container-product-detail{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.productDetails{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  padding: 0px 100px;
+  border-radius: 40px;
+  height: 800px;
+  width: 1200px;
+  align-content: start;
+
+
+}
+
+.productDetails-info{
+  padding: 0px 50px;
+
+}
+.productDetails-info h3{
+  font-size: 50px;
+  font-family: var(--logo-font);
+}
+.detail-img img{
+  width: 350px;
+}
+.detail-img{
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.price-detail{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: var(--primary-font);
+  color: #DC143C;
+}
+
+/*Quantity btn*/
+.quantity{
+  height: 30px;
+  width: 70px;
+  display: flex;
+  background-color: white;
+  border-radius: 18px;
+  border: rgba(0, 0, 0, 1) 1px solid;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.quantity span{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+.quantity span.num{
+  border-left: 1px solid rgba(0, 0, 0, 1);
+  border-right: 1px solid rgba(0, 0, 0, 1);
+  pointer-events: none;
+
+}
+
+.btn-buytoCart{
+  border: 1px solid #242424;
+  background-color: white;
+  color: #242424;
+  border-radius: 20px;
+  padding: 0px 50px;
+  
+  
+
+}
+
+.btn-buytoCart:hover{
+  background-color: #242424;
+  color: white;
+  
+
+
+}
+
+.quantityandcart{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: start;
+  gap: 30px;
+}
+
+/*Cart*/
+
+.table img{
+  width: 100%;
+  width: 100px;
+}
+
+.total-cart{
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+#cal-cart{
+  width: 350px;
+}
+
+.coupon {
+  border: #dbdbdb 1px solid;
+  height: 100px;
+  width: 400px;
+  text-align: center;
+  
+
+}
+
+.summary-total{
+  border: #dbdbdb 1px solid;
+  padding: 10px 100px;
+
+}
+
+.creditcard-name, .coupon-code, .creditcard-email
+,.creditcard-number,.creditcard-adress{
+  border: #f0f0f0 1px solid;
+  color: #3b3b3b;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.creditcard-name, .creditcard-email
+,.creditcard-number, .creditcard-adress{
+  width: 400px;
+}
+
+.creditcard-numbersss{
+  width: 865px;
+}
+
+.exp-container{
+  display: flex;
+  grid-column: 1/3;
+  justify-content: space-between;
+}
+
+/*Check out */
+.payment-detail {
+  display: none; 
+}
+.show-payment {
+  display: block;
+}
+
+.payment-detail{
+  border: #dbdbdb 1px solid;
+  border-radius: 10px;
+  padding: 10px 50px;
+  width: 1000px;
+}
+.payment-details{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+
+.creditcard-state,.creditcard-zip,.creditcard-exp,.creditcard-cvv{
+  border: #f0f0f0 1px solid;
+  color: #3b3b3b;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* Contact page*/
+
+.contact-card{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 450px;
+  width: 650px;
+  padding: 10px 10px;
+  align-items: center;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+
+}
+
+.contact-input{
+  width: 500px;
+  border: #f0f0f0 1px solid;
+  color: #3b3b3b;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.massage{
+  height: 100px;
+}
+
+.contact{
+  padding: 50px 0px;
+  background-color: #3b3b3b;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  top: -50px;
+  left: 150px;
+  width: 1000px;
+
+  
+}
+
+.pic-contact{
+  width: 850px;
+  flex:1;
+  position: absolute;
+  top: 70px;
+  left: 400px;
+  
+  object-fit: cover;
+  z-index: -1; 
+}
+
+
+/* Responsive */
+
