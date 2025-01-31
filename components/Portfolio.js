@@ -3,6 +3,7 @@ export default {
 
   data() {
     return {
+      //
       lang: localStorage.getItem("lang") || "en",
     };
   },
