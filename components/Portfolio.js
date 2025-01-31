@@ -46,7 +46,7 @@ export default {
                 </div>
                 <div class="portfolio__link">
                     <a href="https://github.com/prueksasuphanat/Final-Project" class="contact__button portfolio__button"><i class='bx bxl-github portfolio__icon' ></i>Code<i class="bx bx-right-arrow-alt contact__button-icon"></i></a>
-                    <a href="" class="contact__button portfolio__button"><i class='bx bx-code-alt portfolio__icon'></i>Demo<i class="bx bx-right-arrow-alt contact__button-icon"></i></a>    
+                    <a href="./project/onlinecourse/index.html" class="contact__button portfolio__button"><i class='bx bx-code-alt portfolio__icon'></i>Demo<i class="bx bx-right-arrow-alt contact__button-icon"></i></a>    
                 </div>
             </div>
         </div>
