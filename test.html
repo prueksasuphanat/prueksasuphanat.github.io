@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Geolocation & Multiple IPs</title>
+    <title>Multiple IP Fetcher</title>
   </head>
   <body>
-    <h1>ตำแหน่งของคุณ</h1>
-    <button onclick="getLocation()">ดึงข้อมูล</button>
-    <p id="output">คลิกปุ่มเพื่อดึงข้อมูล</p>
+    <h1>ดึง IP หลายประเภท</h1>
+    <button onclick="getIPs()">ดึง IP</button>
+    <p id="output">คลิกปุ่มเพื่อดึง IP</p>
 
     <script>
       // ดึง Public IPv4
@@ -52,35 +52,17 @@
         };
       }
 
-      // ดึงพิกัด + IPs
-      async function getLocation() {
+      // ดึง IP ทั้งหมด
+      async function getIPs() {
         let ipv4 = await getIPv4();
         let ipv6 = await getIPv6();
 
         getLocalIP((localIP) => {
-          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-              (position) => {
-                let lat = position.coords.latitude;
-                let lon = position.coords.longitude;
-
-                document.getElementById("output").innerHTML = `
-                            🌍 <b>Public IPv4:</b> ${ipv4} <br>
-                            🌍 <b>Public IPv6:</b> ${ipv6} <br>
-                            🏠 <b>Local IP (LAN):</b> ${localIP} <br>
-                            📍 <b>Latitude:</b> ${lat} <br>
-                            📍 <b>Longitude:</b> ${lon}
-                        `;
-              },
-              (error) => {
-                document.getElementById("output").innerHTML =
-                  "Error: " + error.message;
-              }
-            );
-          } else {
-            document.getElementById("output").innerHTML =
-              "Geolocation ไม่รองรับในเบราว์เซอร์นี้";
-          }
+          document.getElementById("output").innerHTML = `
+                    🌍 <b>Public IPv4:</b> ${ipv4} <br>
+                    🌍 <b>Public IPv6:</b> ${ipv6} <br>
+                    🏠 <b>Local IP (LAN):</b> ${localIP}
+                `;
         });
       }
     </script>
