@@ -42,7 +42,7 @@ export default {
                     <p>{{ $t('text.Age')}}: 27</p>
                     <p>{{ $t('text.DateOfBirth') }}: 09.05.1997</p>
                 </div>
-                <a download="" href={CV} class="button button--flex about__btn">{{  $t('text.DownloadCV')}}<span class="material-symbols-outlined">
+                <a download="./assets/resume-suphanat-panyakom.pdf" href="./assets/resume-suphanat-panyakom.pdf" class="button button--flex about__btn">{{  $t('text.DownloadCV')}}<span class="material-symbols-outlined">
                     description
                 </span></a>
             </div>
