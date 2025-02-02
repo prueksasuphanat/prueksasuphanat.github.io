@@ -18,11 +18,13 @@ export default {
             <div class="portfolio__content">
                 
                 <h3 class="portfolio__title">E Commerce 🏠 ({{ $t("text.y2023") }})</h3>
-                <p class="portfolio__description">A furniture sales website utilizing HTML and CSS for practice purposes. This website features responsive web design but does not include sales function   </p>
+                <p class="portfolio__description">{{ $t("text.ContentDemo1") }}</p>
                 <div class="portfolio__subtitle">
                     <p>Html</p>
                     <p>Css</p>
                     <p>Javascript</p>
+                </div>
+                <div class="portfolio__subtitle">
                     <p>Bootstrap</p>
                 </div>
                 <div class="portfolio__link">
@@ -39,7 +41,7 @@ export default {
             <div class="portfolio__content">
                 
                 <h3 class="portfolio__title">Online course 🎓 ({{ $t("text.y2023") }})</h3>
-                <p class="portfolio__description">A online course website that allows user to learn about programming.This project is intended to practice web development using React and utilizing APIs.  </p>
+                <p class="portfolio__description">{{ $t("text.ContentDemo2")}}</p>
                 <div class="portfolio__subtitle">
                     <p>React</p>
                     <p>Css</p>
@@ -57,7 +59,7 @@ export default {
             </div>
             <div class="portfolio__content">
                 <h3 class="portfolio__title">Personal Blog 👦🏻 ({{ $t("text.y2023") }})</h3>
-                <p class="portfolio__description">This is a blog website from Devint Course, which does not include backend development. The website consists of various frontend sections such as Home, Create Blog, Profile. Developing this website allows learning about adjusting web page layouts into Dark mode.</p>
+                <p class="portfolio__description">{{ $t("text.ContentDemo3")}}</p>
                 <div class="portfolio__subtitle">
                     <p>Html</p>
                     <p>Css</p>
@@ -79,10 +81,13 @@ export default {
                 <h3 class="portfolio__title">My Cash Book 📊 ({{ $t("text.y2025") }})</h3>
                 <p class="portfolio__description">{{ $t("text.ContentDemo4") }}</p>
                 <div class="portfolio__subtitle">
-                    <p>Html</p>
-                    <p>Css</p>
-                    <p>Javascript</p>
-
+                    <p>Vue</p>
+                    <p>Tailwind</p>
+                    <p>Typescript</p>
+                </div>
+                <div class="portfolio__subtitle">
+                    <p>Php</p>
+                    <p>MySQL</p>
                 </div>
                 <div class="portfolio__link">
                     <a href="" class="contact__button portfolio__button"><i class='bx bxl-github portfolio__icon' ></i>Code<i class="bx bx-right-arrow-alt contact__button-icon"></i></a>

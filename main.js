@@ -74,6 +74,12 @@ const i18n = new VueI18n({
           "I live in Chiang Mai. I'm interested in frontend developer and backend developer",
         ContentDemo4:
           "This website is created for practicing Vue with TypeScript on the frontend, while the backend API is developed using PHP with database management. The website consists of two sections: Admin and User. The Admin can log in with the username: admin and password: 123456, while the User can log in with the username: user and password: 123456.",
+        ContentDemo1:
+          "A furniture sales website utilizing HTML and CSS for practice purposes. This website features responsive web design but does not include sales function",
+        ContentDemo2:
+          "A online course website that allows user to learn about programming.This project is intended to practice web development using React and utilizing APIs.",
+        ContentDemo3:
+          "This is a blog website from Devint Course, which does not include backend development. The website consists of various frontend sections such as Home, Create Blog, Profile. Developing this website allows learning about adjusting web page layouts into Dark mode.",
       },
     },
     th: {
@@ -137,6 +143,12 @@ const i18n = new VueI18n({
           "ผมอาศัยอยู่ที่จังหวัดเชียงใหม่ มีความสนใจในงาน frontend Developer และ backend Developer",
         ContentDemo4:
           "เว็บไซต์นี้ถูกสร้างขึ้นเพื่อฝึกฝนการใช้ Vue กับ TypeScript บนฝั่ง Frontend ในขณะที่ API ฝั่ง Backend ถูกพัฒนาด้วย PHP และมีระบบจัดการฐานข้อมูลเว็บไซต์ประกอบด้วยสองส่วน ได้แก่ Admin และ User Admin สามารถเข้าสู่ระบบด้วย ชื่อผู้ใช้: admin รหัสผ่าน: 123456 User สามารถเข้าสู่ระบบด้วย ชื่อผู้ใช้: user รหัสผ่าน: 123456",
+        ContentDemo1:
+          "เว็บไซต์ขายเฟอร์นิเจอร์ที่ใช้ HTML และ CSS เพื่อการฝึกฝน เว็บไซต์นี้มีการออกแบบให้รองรับการแสดงผลบนอุปกรณ์ต่าง ๆ (Responsive Web Design) แต่ไม่มีฟังก์ชันการขายสินค้า",
+        ContentDemo2:
+          "เว็บไซต์คอร์สเรียนออนไลน์ที่ให้ผู้ใช้เรียนรู้เกี่ยวกับการเขียนโปรแกรม โปรเจกต์นี้ถูกสร้างขึ้นเพื่อฝึกฝนการพัฒนาเว็บโดยใช้ React และการใช้งาน API",
+        ContentDemo3:
+          "นี่คือเว็บไซต์บล็อกจาก Devint Course ซึ่งไม่มีการพัฒนาฝั่ง Backend เว็บไซต์ประกอบด้วยส่วนต่าง ๆ ของ Frontend เช่น หน้าแรก (Home), สร้างบล็อก (Create Blog), และโปรไฟล์ (Profile) การพัฒนาเว็บไซต์นี้ช่วยให้เรียนรู้เกี่ยวกับการปรับแต่งเลย์เอาต์ของหน้าเว็บให้รองรับ โหมดมืด (Dark Mode)",
       },
     },
   },

@@ -38,7 +38,7 @@ export default {
 
             </div>
             <div class="contact__content">
-                <h3 class="contact__title">Write somthing to me</h3>
+                <h3 class="contact__title">[TODO] Write somthing to me</h3>
                 <form class="contact__form">
                     <div class="contact__form-div">
                         <label class="contact__form-tag">Name</label>
