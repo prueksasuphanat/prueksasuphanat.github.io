@@ -2,7 +2,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
-
   css: [
     "primevue/resources/themes/saga-blue/theme.css",
     "primevue/resources/primevue.min.css",
@@ -12,7 +11,6 @@ export default defineNuxtConfig({
 
   modules: ["nuxt-primevue", "@pinia/nuxt"],
   primevue: {},
-
   app: {
     head: {
       link: [
