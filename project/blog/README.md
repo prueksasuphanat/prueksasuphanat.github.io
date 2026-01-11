@@ -1,2 +1,0 @@
-# Blog Platform
- Personal Blog 
