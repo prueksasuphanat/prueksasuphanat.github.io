@@ -1,21 +1,27 @@
 <template>
-  <div>
-    <Navbar />
-    <Home />
-    <AboutMe />
-    <Education />
-    <Portfolio />
-    <Contact />
-    <Footer />
+  <div id="app">
+    <DefaultLayout>
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </DefaultLayout>
   </div>
 </template>
 
 <script setup lang="ts">
-import Navbar from './components/Navbar.vue'
-import Home from './components/Home.vue'
-import AboutMe from './components/AboutMe.vue'
-import Education from './components/Education.vue'
-import Portfolio from './components/Portfolio.vue'
-import Contact from './components/Contact.vue'
-import Footer from './components/Footer.vue'
+import DefaultLayout from '@/layouts/DefaultLayout.vue'
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

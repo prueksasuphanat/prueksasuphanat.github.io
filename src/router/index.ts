@@ -4,15 +4,19 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
-    component: () => import('@/App.vue'),
+    component: () => import('@/views/HomeView.vue'),
+    meta: {
+      title: 'Home',
+    },
   },
-  // Add more routes here as needed
-  // Example:
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   component: () => import('@/views/About.vue'),
-  // },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: () => import('@/views/NotFoundView.vue'),
+    meta: {
+      title: '404 - Page Not Found',
+    },
+  },
 ]
 
 const router = createRouter({
@@ -30,6 +34,15 @@ const router = createRouter({
       return { top: 0 }
     }
   },
+})
+
+// Navigation guard for page titles
+router.beforeEach((to, _from, next) => {
+  const title = to.meta.title as string
+  if (title) {
+    document.title = `${title} - Portfolio Pruek`
+  }
+  next()
 })
 
 export default router
