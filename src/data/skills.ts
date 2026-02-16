@@ -2,31 +2,34 @@ import type { SkillCategory } from "@/types";
 
 export const skillsData: SkillCategory[] = [
   {
-    title: "Frontend developer",
+    title: "Core Stack",
     skills: [
-      { name: "Html", level: "advanced" },
-      { name: "Css", level: "advanced" },
-      { name: "Javascript, Typescript", level: "advanced" },
-      { name: "Vue", level: "advanced" },
-      { name: "Nuxt.js", level: "intermediate" },
-      { name: "React", level: "beginner" },
+      { name: "Vue.js" },
+      { name: "Nuxt.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Node.js" },
+      { name: "Fastify" },
+      { name: "PHP" },
+      { name: "PostgreSQL" },
+      { name: "MySQL" },
+      { name: "Kysely" },
     ],
   },
   {
-    title: "Backend developer",
+    title: "Currently Learning / Exploring",
     skills: [
-      { name: "Php", level: "intermediate" },
-      { name: "MySQL", level: "beginner" },
+      { name: "React.js" },
+      { name: "Next.js" },
+      { name: "Multi-agent AI Systems" },
     ],
   },
   {
-    title: "Other",
+    title: "Tools & Workflow",
     skills: [
-      { name: "Python", level: "intermediate" },
-      { name: "Bootstrap", level: "advanced" },
-      { name: "Material UI", level: "intermediate" },
-      { name: "Photoshop", level: "intermediate" },
-      { name: "Tailwind", level: "advanced" },
+      { name: "Git" },
+      { name: "AI Agent" },
+      { name: "OpenClaw" },
     ],
   },
 ];

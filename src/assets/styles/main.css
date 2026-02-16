@@ -804,6 +804,40 @@ img {
 }
 
 /* portfilio */
+.portfolio__filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: var(--mb-3);
+  padding: 0 1rem;
+}
+
+.portfolio__filter-btn {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio__filter-btn:hover {
+  background-color: var(--title-color);
+  color: var(--container-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio__filter-active {
+  background-color: var(--title-color);
+  color: var(--container-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .portfolio__container {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
