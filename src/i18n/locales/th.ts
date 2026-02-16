@@ -7,6 +7,7 @@ export default {
     Contact: "ติดต่อ",
     Pruek: "พฤกษ์",
     Hello: "สวัสดี",
+    ImPruek: "ผมชื่อพฤกษ์",
     Suphanat: "ศุภณัฐ",
     Panyakom: "ปัญญาคม",
     Education: "การศึกษา",
@@ -53,9 +54,11 @@ export default {
     Nov: "พ.ย.",
     Dec: "ธ.ค.",
     month: "เดือน",
+    ProfileDescription:
+      "นักพัฒนา Frontend ที่หลงใหลในการสร้างเว็บแอปพลิเคชันที่สวยงามและใช้งานได้จริง",
     ContentAboutMe:
       "ผมอาศัยอยู่ที่จังหวัดเชียงใหม่ มีความสนใจในงาน frontend Developer และ backend Developer",
     ContentDemo4:
       "เว็บไซต์นี้ถูกสร้างขึ้นเพื่อฝึกฝนการใช้ Vue กับ TypeScript บนฝั่ง Frontend ในขณะที่ API ฝั่ง Backend ถูกพัฒนาด้วย PHP และมีระบบจัดการฐานข้อมูลเว็บไซต์ประกอบด้วยสองส่วน ได้แก่ Admin และ User Admin สามารถเข้าสู่ระบบด้วย ชื่อผู้ใช้: admin รหัสผ่าน: 123456 User สามารถเข้าสู่ระบบด้วย ชื่อผู้ใช้: user รหัสผ่าน: 123456",
   },
-};
+}

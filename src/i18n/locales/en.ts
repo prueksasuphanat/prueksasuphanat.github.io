@@ -7,6 +7,7 @@ export default {
     Contact: "Contact",
     Pruek: "Pruek",
     Hello: "Hello",
+    ImPruek: "I'm Pruek",
     Suphanat: "Suphanat",
     Panyakom: "Panyakom",
     Education: "Education",
@@ -53,9 +54,11 @@ export default {
     Nov: "Nov",
     Dec: "Dec",
     month: "month",
+    ProfileDescription:
+      "Frontend Developer passionate about creating beautiful and functional web applications",
     ContentAboutMe:
       "I live in Chiang Mai. I'm interested in frontend developer and backend developer",
     ContentDemo4:
       "This website is created for practicing Vue with TypeScript on the frontend, while the backend API is developed using PHP with database management. The website consists of two sections: Admin and User. The Admin can log in with the username: admin and password: 123456, while the User can log in with the username: user and password: 123456.",
   },
-};
+}
