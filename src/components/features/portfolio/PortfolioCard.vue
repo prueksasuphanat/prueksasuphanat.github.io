@@ -1,19 +1,44 @@
 <template>
-  <div class="portfolio__container container grid">
-    <div class="portfolio__img">
+  <div class="portfolio__card">
+    <div class="portfolio__img-wrapper">
       <img
         :src="project.image"
         :alt="project.title"
         loading="lazy"
-        width="600"
-        height="400"
+        class="portfolio__img"
       />
+      <div class="portfolio__overlay">
+        <div class="portfolio__links">
+          <a
+            v-if="project.githubUrl"
+            :href="project.githubUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio__link-btn"
+            aria-label="View code on GitHub"
+          >
+            <i class="bx bxl-github"></i>
+          </a>
+          <a
+            v-if="project.demoUrl"
+            :href="project.demoUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio__link-btn"
+            aria-label="View live demo"
+          >
+            <i class="bx bx-link-external"></i>
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="portfolio__content">
       <h3 class="portfolio__title">
-        {{ project.title }} ({{ t(`text.${project.year}`) }})
+        {{ project.title }}
       </h3>
+      
+      <span class="portfolio__year">{{ t(`text.${project.year}`) }}</span>
 
       <p class="portfolio__description">
         {{
@@ -23,36 +48,14 @@
         }}
       </p>
 
-      <div class="portfolio__subtitle">
-        <p v-for="tech in project.technologies" :key="tech">{{ tech }}</p>
-      </div>
-
-      <div class="portfolio__link">
-        <a
-          v-if="project.githubUrl"
-          :href="project.githubUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contact__button portfolio__button"
-          aria-label="View code on GitHub"
+      <div class="portfolio__tech">
+        <span 
+          v-for="tech in project.technologies" 
+          :key="tech"
+          class="portfolio__tech-tag"
         >
-          <i class="bx bxl-github portfolio__icon"></i>
-          Code
-          <i class="bx bx-right-arrow-alt contact__button-icon"></i>
-        </a>
-
-        <a
-          v-if="project.demoUrl"
-          :href="project.demoUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contact__button portfolio__button"
-          aria-label="View live demo"
-        >
-          <i class="bx bx-code-alt portfolio__icon"></i>
-          Demo
-          <i class="bx bx-right-arrow-alt contact__button-icon"></i>
-        </a>
+          {{ tech }}
+        </span>
       </div>
     </div>
   </div>

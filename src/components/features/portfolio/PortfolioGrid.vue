@@ -2,11 +2,13 @@
   <section class="portfolio section" id="portfolio">
     <h2 class="section__title">{{ t('text.Portfolio') }}</h2>
     
-    <PortfolioCard
-      v-for="project in projects"
-      :key="project.id"
-      :project="project"
-    />
+    <div class="portfolio__container container grid">
+      <PortfolioCard
+        v-for="project in projects"
+        :key="project.id"
+        :project="project"
+      />
+    </div>
   </section>
 </template>
 

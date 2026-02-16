@@ -1,12 +1,12 @@
 <template>
-  <header class="header" id="header">
+  <header class="header shadow-sm" id="header">
     <nav class="nav container">
       <div class="logo__container">
         <a href="#" class="nav__logo">{{ appConfig.author.split(' ')[0] }}</a>
         <LanguageSwitch />
       </div>
 
-      <div class="nav__menu" :class="{ 'show-menu': isMenuOpen }">
+      <div class="nav__menu pr-[40px]!" :class="{ 'show-menu': isMenuOpen }">
         <ul class="nav__list grid">
           <li v-for="item in NAVIGATION_ITEMS" :key="item.id" class="nav__item">
             <a :href="item.href" class="nav__link" @click="closeMenu">
@@ -30,7 +30,7 @@
         :aria-expanded="isMenuOpen"
         aria-label="Toggle navigation menu"
       >
-        <i class="uil uil-apps"></i>
+        <i class="uil uil-apps pr-[40px]!"></i>
       </button>
     </nav>
   </header>
