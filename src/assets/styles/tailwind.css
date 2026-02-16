@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for theme */
+@layer base {
+  :root {
+    --hue: 0;
+    --sat: 0%;
+  }
+}

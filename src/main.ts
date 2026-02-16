@@ -4,6 +4,8 @@ import App from "./App.vue";
 import router from "./router";
 import i18n from "./i18n";
 
+// Import Tailwind CSS
+import "./assets/styles/tailwind.css";
 // Import global styles
 import "./assets/styles/main.css";
 
