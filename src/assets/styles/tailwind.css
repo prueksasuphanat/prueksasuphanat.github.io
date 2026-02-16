@@ -1,11 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* CSS Variables for theme */
-@layer base {
-  :root {
-    --hue: 0;
-    --sat: 0%;
-  }
+:root {
+  --hue: 0;
+  --sat: 0%;
 }

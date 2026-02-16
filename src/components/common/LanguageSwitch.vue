@@ -10,7 +10,7 @@
     <button
       @click="toggleLanguage"
       class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-title-color focus:ring-offset-2"
-      :class="locale === 'en' ? 'bg-title-color' : 'bg-gray-300'"
+      :class="locale === 'en' ? 'bg-title-color bg-gray-800' : 'bg-gray-300'"
       role="switch"
       :aria-checked="locale === 'en'"
       aria-label="Toggle language"
