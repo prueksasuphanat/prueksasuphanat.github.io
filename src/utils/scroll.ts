@@ -1,7 +1,4 @@
-/**
- * Smoothly scrolls to a section by its ID
- * @param sectionId - The ID of the section to scroll to
- */
+
 export const scrollToSection = (sectionId: string): void => {
   const section = document.getElementById(sectionId);
   if (section) {
@@ -12,9 +9,6 @@ export const scrollToSection = (sectionId: string): void => {
   }
 };
 
-/**
- * Smoothly scrolls to the top of the page
- */
 export const scrollToTop = (): void => {
   window.scrollTo({
     top: 0,

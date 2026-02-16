@@ -2,14 +2,11 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
 export const useAppStore = defineStore('app', () => {
-  // State
   const locale = ref(localStorage.getItem('lang') || 'en')
   const isMenuOpen = ref(false)
 
-  // Getters
   const currentLocale = computed(() => locale.value)
 
-  // Actions
   const setLocale = (newLocale: string) => {
     locale.value = newLocale
     localStorage.setItem('lang', newLocale)
@@ -24,12 +21,9 @@ export const useAppStore = defineStore('app', () => {
   }
 
   return {
-    // State
     locale,
     isMenuOpen,
-    // Getters
     currentLocale,
-    // Actions
     setLocale,
     toggleMenu,
     closeMenu,
