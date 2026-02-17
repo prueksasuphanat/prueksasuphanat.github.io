@@ -1,10 +1,11 @@
 <template>
   <div class="contact__content">
-    <h3 class="contact__title">Write something to me</h3>
+    <h3 class="contact__title">{{ t('contact.writeToMe') }}</h3>
     <form @submit.prevent="handleSubmit" class="contact__form">
+      <!-- Name field -->
       <div class="contact__form-div">
         <label class="contact__form-tag" for="contact-name">
-          Name
+          {{ t('contact.form.name') }}
         </label>
         <input
           id="contact-name"
@@ -12,14 +13,27 @@
           type="text"
           name="name"
           class="contact__form-input"
-          placeholder="Insert your name"
-          required
+          :class="{ 'contact__form-input--error': errors.name }"
+          :placeholder="t('contact.form.namePlaceholder')"
+          :aria-invalid="!!errors.name"
+          :aria-describedby="errors.name ? 'name-error' : undefined"
+          @blur="validateField('name')"
         />
+        <span
+          v-if="errors.name"
+          id="name-error"
+          class="contact__form-error"
+          role="alert"
+          aria-live="polite"
+        >
+          {{ errors.name }}
+        </span>
       </div>
 
+      <!-- Email field -->
       <div class="contact__form-div">
         <label class="contact__form-tag" for="contact-email">
-          Email
+          {{ t('contact.form.email') }}
         </label>
         <input
           id="contact-email"
@@ -27,14 +41,27 @@
           type="email"
           name="email"
           class="contact__form-input"
-          placeholder="Insert your email"
-          required
+          :class="{ 'contact__form-input--error': errors.email }"
+          :placeholder="t('contact.form.emailPlaceholder')"
+          :aria-invalid="!!errors.email"
+          :aria-describedby="errors.email ? 'email-error' : undefined"
+          @blur="validateField('email')"
         />
+        <span
+          v-if="errors.email"
+          id="email-error"
+          class="contact__form-error"
+          role="alert"
+          aria-live="polite"
+        >
+          {{ errors.email }}
+        </span>
       </div>
 
+      <!-- Message field -->
       <div class="contact__form-div contact__form-area">
         <label class="contact__form-tag" for="contact-message">
-          Message
+          {{ t('contact.form.message') }}
         </label>
         <textarea
           id="contact-message"
@@ -43,17 +70,31 @@
           cols="30"
           rows="10"
           class="contact__form-input"
-          placeholder="Write something"
-          required
+          :class="{ 'contact__form-input--error': errors.message }"
+          :placeholder="t('contact.form.messagePlaceholder')"
+          :aria-invalid="!!errors.message"
+          :aria-describedby="errors.message ? 'message-error' : undefined"
+          @blur="validateField('message')"
         ></textarea>
+        <span
+          v-if="errors.message"
+          id="message-error"
+          class="contact__form-error"
+          role="alert"
+          aria-live="polite"
+        >
+          {{ errors.message }}
+        </span>
       </div>
 
+      <!-- Submit button -->
       <button
         type="submit"
-        :disabled="isSubmitting"
+        :disabled="!isValid || isSubmitting"
         class="button button--flex about__btn"
+        :aria-busy="isSubmitting"
       >
-        {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+        {{ isSubmitting ? t('contact.form.sending') : t('contact.form.submit') }}
         <span class="material-symbols-outlined">send</span>
       </button>
     </form>
@@ -61,29 +102,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useContactForm } from '@/composables/features/useContactForm'
 
-const formData = ref({
-  name: '',
-  email: '',
-  message: '',
-})
-
-const isSubmitting = ref(false)
-
-const handleSubmit = async () => {
-  isSubmitting.value = true
-  try {
-    // TODO: Implement form submission logic
-    console.log('Form submitted:', formData.value)
-    alert('Message sent successfully!')
-    // Reset form
-    formData.value = { name: '', email: '', message: '' }
-  } catch (error) {
-    console.error('Form submission error:', error)
-    alert('Failed to send message. Please try again.')
-  } finally {
-    isSubmitting.value = false
-  }
-}
+const { t } = useI18n()
+const {
+  formData,
+  errors,
+  isSubmitting,
+  isValid,
+  validateField,
+  handleSubmit,
+} = useContactForm()
 </script>

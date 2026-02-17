@@ -61,4 +61,32 @@ export default {
     ContentDemo4:
       "This website is created for practicing Vue with TypeScript on the frontend, while the backend API is developed using PHP with database management. The website consists of two sections: Admin and User. The Admin can log in with the username: admin and password: 123456, while the User can log in with the username: user and password: 123456.",
   },
+  contact: {
+    title: "Contact Me",
+    talkToMe: "Talk to me",
+    writeToMe: "Write something to me",
+    form: {
+      name: "Name",
+      email: "Email",
+      message: "Message",
+      namePlaceholder: "Insert your name",
+      emailPlaceholder: "Insert your email",
+      messagePlaceholder: "Write something",
+      submit: "Send Message",
+      sending: "Sending...",
+      success: "Message sent successfully!",
+      error: "Failed to send message. Please try again.",
+    },
+    validation: {
+      required: "This field is required",
+      invalidEmail: "Please enter a valid email address",
+    },
+    cards: {
+      writeMe: "Write me",
+      callMe: "Call me",
+      sendEmail: "Send email",
+      callPhone: "Call phone",
+      messageDiscord: "Message on Discord",
+    },
+  },
 }

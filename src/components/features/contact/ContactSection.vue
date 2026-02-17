@@ -1,9 +1,10 @@
 <template>
   <section class="Contact section" id="contact">
-    <h2 class="section__title">{{ t('text.ContactMe') }}</h2>
-    <div class="contact__container container grid">
-      <ContactInfo />
-      <ContactForm />
+    <h2 class="section__title">{{ t('contact.title') }}</h2>
+    <div class="flex justify-center gap-[100px] sm:flex-col sm:justify-center! sm:items-center">
+     
+         <ContactInfo />
+        <ContactForm />
     </div>
   </section>
 </template>

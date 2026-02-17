@@ -61,4 +61,32 @@ export default {
     ContentDemo4:
       "เว็บไซต์นี้ถูกสร้างขึ้นเพื่อฝึกฝนการใช้ Vue กับ TypeScript บนฝั่ง Frontend ในขณะที่ API ฝั่ง Backend ถูกพัฒนาด้วย PHP และมีระบบจัดการฐานข้อมูลเว็บไซต์ประกอบด้วยสองส่วน ได้แก่ Admin และ User Admin สามารถเข้าสู่ระบบด้วย ชื่อผู้ใช้: admin รหัสผ่าน: 123456 User สามารถเข้าสู่ระบบด้วย ชื่อผู้ใช้: user รหัสผ่าน: 123456",
   },
+  contact: {
+    title: "ติดต่อฉัน",
+    talkToMe: "ติดต่อฉัน",
+    writeToMe: "เขียนข้อความถึงฉัน",
+    form: {
+      name: "ชื่อ",
+      email: "อีเมล",
+      message: "ข้อความ",
+      namePlaceholder: "กรอกชื่อของคุณ",
+      emailPlaceholder: "กรอกอีเมลของคุณ",
+      messagePlaceholder: "เขียนข้อความ",
+      submit: "ส่งข้อความ",
+      sending: "กำลังส่ง...",
+      success: "ส่งข้อความสำเร็จ!",
+      error: "ส่งข้อความไม่สำเร็จ กรุณาลองใหม่อีกครั้ง",
+    },
+    validation: {
+      required: "กรุณากรอกข้อมูลในช่องนี้",
+      invalidEmail: "กรุณากรอกอีเมลที่ถูกต้อง",
+    },
+    cards: {
+      writeMe: "เขียนถึงฉัน",
+      callMe: "โทรหาฉัน",
+      sendEmail: "ส่งอีเมล",
+      callPhone: "โทรศัพท์",
+      messageDiscord: "ส่งข้อความทาง Discord",
+    },
+  },
 }

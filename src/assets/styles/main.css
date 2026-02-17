@@ -699,9 +699,9 @@ img {
 /* contact */
 
 .contact__container {
-  grid-template-columns: repeat(2, max-content);
-  justify-content: center;
-  column-gap: 6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   padding-bottom: 3rem;
 }
 
@@ -801,6 +801,20 @@ img {
 
 .contact__form-area textarea {
   resize: none;
+}
+
+.contact__form-input--error {
+  border-color: #dc3545;
+}
+
+.contact__form-error {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: var(--smaller-font-size);
+  color: #dc3545;
+  position: absolute;
+  bottom: -1.25rem;
+  left: 0;
 }
 
 /* portfilio */
@@ -1278,7 +1292,7 @@ img {
 
   /* Contact */
   .contact__container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     column-gap: 4rem;
   }
   .contact__form {
