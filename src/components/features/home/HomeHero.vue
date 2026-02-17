@@ -6,7 +6,13 @@
           <SocialLinks />
         </div>
 
-        <div class="home__img"></div>
+        <div class="home__img">
+          <img 
+            :src="profileImage" 
+            alt="Profile" 
+            class="home__img-element"
+          />
+        </div>
 
         <div class="home__data">
           <h1 class="home__title">
@@ -30,4 +36,13 @@ import { personalInfo } from '@/data/about'
 import SocialLinks from '@/components/common/SocialLinks.vue'
 
 const { t } = useI18n()
+const profileImage = '/images/83908473_10213544029074306_1031853080976556032_n.jpg'
 </script>
+
+<style scoped>
+.home__img-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>

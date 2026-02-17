@@ -317,15 +317,15 @@ img {
   align-items: center;
 }
 .home__img {
-  background: url('./images/83908473_10213544029074306_1031853080976556032_n.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   order: 1;
   justify-self: center;
   width: 300px;
   height: 300px;
   animation: profile__animate 8s ease-in-out infinite 1s;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes profile__animate {
