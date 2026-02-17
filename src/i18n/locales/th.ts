@@ -89,4 +89,11 @@ export default {
       messageDiscord: "ส่งข้อความทาง Discord",
     },
   },
+  portfolio: {
+    filter: {
+      all: "ทั้งหมด",
+      practice: "โปรเจกต์ฝึกหัด",
+      production: "โปรเจกต์ที่ใช้งานจริง",
+    },
+  },
 }

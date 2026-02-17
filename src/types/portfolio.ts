@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   description: string;
   technologies: string[];
+  category: 'practice' | 'production';
   image: string;
   githubUrl?: string;
   demoUrl?: string;

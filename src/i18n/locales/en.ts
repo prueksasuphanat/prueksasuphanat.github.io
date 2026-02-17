@@ -89,4 +89,11 @@ export default {
       messageDiscord: "Message on Discord",
     },
   },
+  portfolio: {
+    filter: {
+      all: "All Projects",
+      practice: "Practices",
+      production: "Productions",
+    },
+  },
 }
