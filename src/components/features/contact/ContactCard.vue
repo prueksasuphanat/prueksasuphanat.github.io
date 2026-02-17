@@ -1,24 +1,23 @@
 <script setup lang="ts">
-interface Props {
-  icon: string
-  title: string
-  data: string
-  link: string
-  linkText: string
-  ariaLabel: string
-  external?: boolean
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  external: false
+const props = defineProps({
+  icon: String,
+  title: String,
+  data: String,
+  link: String,
+  linkText: String,
+  ariaLabel: String,
+  external: {
+    type : Boolean,
+    default : false
+  },
 })
 </script>
 
 <template>
   <div class="contact__card">
     <i :class="['contact__card-icon', icon]"></i>
-    <h3 class="contact__card-title">{{ title }}</h3>
-    <span class="contact__card-data">{{ data }}</span>
+    <h3 class="contact__card-title">{{ props.title }}</h3>
+    <span class="contact__card-data">{{ props.data }}</span>
     <a
       :href="link"
       class="contact__button"
@@ -26,7 +25,7 @@ const props = withDefaults(defineProps<Props>(), {
       :target="external ? '_blank' : undefined"
       :rel="external ? 'noopener noreferrer' : undefined"
     >
-      {{ linkText }}
+      {{ props.linkText }}
       <i class="bx bx-right-arrow-alt contact__button-icon"></i>
     </a>
   </div>
