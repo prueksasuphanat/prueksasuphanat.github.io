@@ -1,58 +1,58 @@
-# name: Deploy Vue to GitHub Pages
+name: Deploy Vue to GitHub Pages
 
-# on:
-#   # ทำงานเมื่อมีการ Push โค้ดเข้า Branch 'main'
-#   push:
-#     branches: ["main"]
+on:
+  # ทำงานเมื่อมีการ Push โค้ดเข้า Branch 'main'
+  push:
+    branches: ["main"]
 
-#   # อนุญาตให้กดปุ่มรันเองได้จากหน้าเว็บ GitHub (เผื่ออยาก Deploy ซ้ำ)
-#   workflow_dispatch:
+  # อนุญาตให้กดปุ่มรันเองได้จากหน้าเว็บ GitHub (เผื่ออยาก Deploy ซ้ำ)
+  workflow_dispatch:
 
-# # ให้สิทธิ์ GitHub Actions ในการอ่านโค้ดและเขียนลง GitHub Pages
-# permissions:
-#   contents: read
-#   pages: write
-#   id-token: write
+# ให้สิทธิ์ GitHub Actions ในการอ่านโค้ดและเขียนลง GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-# # ป้องกันการรันซ้อนกัน (Concurrency Control)
-# # ถ้ามีการ push ถี่ๆ ระบบจะยกเลิกงานเก่าที่กำลังรันอยู่ แล้วรันงานล่าสุดแทน
-# concurrency:
-#   group: "pages"
-#   cancel-in-progress: true
+# ป้องกันการรันซ้อนกัน (Concurrency Control)
+# ถ้ามีการ push ถี่ๆ ระบบจะยกเลิกงานเก่าที่กำลังรันอยู่ แล้วรันงานล่าสุดแทน
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
-# jobs:
-#   # งานส่วนที่ 1: Build (เตรียมไฟล์)
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v4
+jobs:
+  # งานส่วนที่ 1: Build (เตรียมไฟล์)
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-#       - name: Setup Node.js
-#         uses: actions/setup-node@v4
-#         with:
-#           node-version: '20' # ใช้ Node v20 (LTS ปัจจุบัน)
-#           cache: 'npm' # เก็บ Cache ของ npm ไว้ จะได้ลงเร็วขึ้นในรอบหน้า
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # ใช้ Node v20 (LTS ปัจจุบัน)
+          cache: 'npm' # เก็บ Cache ของ npm ไว้ จะได้ลงเร็วขึ้นในรอบหน้า
 
-#       - name: Install dependencies
-#         run: npm ci # ใช้ ci แทน install (Clean Install) เพื่อความแน่นอน
+      - name: Install dependencies
+        run: npm ci # ใช้ ci แทน install (Clean Install) เพื่อความแน่นอน
 
-#       - name: Build project
-#         run: npm run build # คำสั่ง Build ปกติของ Vue (Output จะอยู่ที่โฟลเดอร์ dist)
+      - name: Build project
+        run: npm run build # คำสั่ง Build ปกติของ Vue (Output จะอยู่ที่โฟลเดอร์ dist)
 
-#       - name: Upload artifact
-#         uses: actions/upload-pages-artifact@v3
-#         with:
-#           path: './dist' # ⚠️ สำคัญ: Vite Build แล้วได้โฟลเดอร์นี้ ถ้าเป็น Nuxt หรืออื่นๆ ต้องแก้ตรงนี้
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist' 
 
-#   # งานส่วนที่ 2: Deploy (เอาขึ้นเว็บ)
-#   deploy:
-#     environment:
-#       name: github-pages
-#       url: ${{ steps.deployment.outputs.page_url }}
-#     needs: build # ต้องรอให้งาน build เสร็จก่อน
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Deploy to GitHub Pages
-#         id: deployment
-#         uses: actions/deploy-pages@v4
+  # งานส่วนที่ 2: Deploy (เอาขึ้นเว็บ)
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build # ต้องรอให้งาน build เสร็จก่อน
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
