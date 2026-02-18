@@ -1,11 +1,17 @@
 <template>
-  <div class="portfolio__card">
+  <div
+    class="portfolio__card"
+    tabindex="0"
+    @click="handleCardClick"
+    @keydown.enter="handleCardClick"
+    @keydown.space.prevent="handleCardClick"
+  >
     <div class="portfolio__img-wrapper">
       <img :src="project.image" :alt="project.title" loading="lazy" class="portfolio__img" />
       <div v-if="!project.isComplete" class="portfolio__badge">
         {{ t('text.inDevelopment') }}
       </div>
-      <div class="portfolio__overlay">
+      <div class="portfolio__overlay" :class="{ 'portfolio__overlay--active': isActive }">
         <div class="portfolio__links">
           <a
             v-if="project.githubUrl"
@@ -43,7 +49,11 @@
       </p>
 
       <div class="portfolio__tech">
-        <span v-for="tech in project.technologies" :key="tech" class="portfolio__tech-tag">
+        <span
+          v-for="tech in project.technologies"
+          :key="tech"
+          class="portfolio__tech-tag cursor-pointer"
+        >
           {{ tech }}
         </span>
       </div>
@@ -52,6 +62,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Project } from '@/types'
 import { formatDate } from '@/utils/helpers/format'
@@ -61,4 +72,9 @@ defineProps<{
 }>()
 
 const { t } = useI18n()
+const isActive = ref(false)
+
+const handleCardClick = () => {
+  isActive.value = !isActive.value
+}
 </script>
