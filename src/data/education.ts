@@ -1,67 +1,77 @@
-import type { EducationItem, ExperienceItem } from "@/types";
+import type { EducationItem, ExperienceItem } from '@/types'
 
 export const educationData: EducationItem[] = [
   {
     id: 1,
-    title: "HighSchool",
-    subtitle: "PhadungPanya",
-    location: "Tak, Thailand",
+    title: 'HighSchool',
+    subtitle: 'PhadungPanya',
+    location: 'Tak, Thailand',
     period: {
-      start: "y2008",
-      end: "y2014",
+      start: 'y2008',
+      end: 'y2014',
     },
   },
   {
     id: 2,
-    title: "BEngFull",
-    subtitle: "IndustrialEng",
-    location: "ChiangMai, University",
+    title: 'BEngFull',
+    subtitle: 'IndustrialEng',
+    location: 'ChiangMai, University',
     period: {
-      start: "y2015",
-      end: "y2019",
+      start: 'y2015',
+      end: 'y2019',
     },
   },
   {
     id: 3,
-    title: "MEngIEFull",
-    subtitle: "IndustrialEng",
-    location: "ChiangMai, University",
+    title: 'MEngIEFull',
+    subtitle: 'IndustrialEng',
+    location: 'ChiangMai, University',
     period: {
-      start: "y2019",
-      end: "y2023",
+      start: 'y2019',
+      end: 'y2023',
     },
   },
-];
+  {
+    id: 1,
+    title: 'Road to Frontend Developer Bootcamp #2',
+    subtitle: '',
+    location: '',
+    period: {
+      start: '2023-11-01',
+      end: '2024-02-28',
+    },
+  },
+]
 
 export const experienceData: ExperienceItem[] = [
   {
-    id: 1,
-    title: "Road to Frontend Developer Bootcamp #2",
-    company: "BorntoDev",
-    position: "Certificate",
-    period: {
-      start: "Nov, y2023",
-      end: "Feb, y2024",
-    },
-  },
-  {
     id: 2,
-    title: "IT-CAT Co.,Ltd",
-    company: "ChiangMai",
-    position: "Frontend Dev",
+    title: 'IT-CAT Co.,Ltd',
+    company: 'ChiangMai',
+    position: 'Frontend Dev',
     period: {
-      start: "Apr, y2024",
-      end: "Jul, y2024",
+      start: '2024-04-01',
+      end: '2024-07-31',
     },
   },
   {
     id: 3,
-    title: "Wolves Corporation",
-    company: "ChiangMai",
-    position: "Frontend Dev (1 month), Backend Dev",
+    title: 'Wolves Corporation',
+    company: 'ChiangMai',
+    position: 'Frontend Dev (1 month), Backend Dev',
     period: {
-      start: "Aug, y2024",
-      end: "Dec, y2024",
+      start: '2024-08-01',
+      end: '2024-12-31',
     },
   },
-];
+  {
+    id: 3,
+    title: 'Lucas Strategy Co.,Ltd.',
+    company: 'ChiangMai',
+    position: 'Full-Stack Developer',
+    period: {
+      start: '2025-03-01',
+      end: '2026-03-01',
+    },
+  },
+]

@@ -11,7 +11,15 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
+import { useAppStore } from '@/stores'
+
+const appStore = useAppStore()
+
+onMounted(() => {
+  appStore.fetchRepoData()
+})
 </script>
 
 <style>

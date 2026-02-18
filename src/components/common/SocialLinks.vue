@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-row gap-2 sm:flex-row md:flex-col">
     <a
       v-for="(link, platform) in SOCIAL_LINKS"
       :key="platform"

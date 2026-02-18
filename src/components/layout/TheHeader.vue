@@ -6,7 +6,7 @@
         <LanguageSwitch />
       </div>
 
-      <div class="nav__menu " :class="{ 'show-menu': isMenuOpen }">
+      <div class="nav__menu" :class="{ 'show-menu': isMenuOpen }">
         <ul class="nav__list grid">
           <li v-for="item in NAVIGATION_ITEMS" :key="item.id" class="nav__item">
             <a :href="item.href" class="nav__link" @click="closeMenu">
@@ -15,11 +15,7 @@
             </a>
           </li>
         </ul>
-        <button
-          class="nav__close"
-          @click="closeMenu"
-          aria-label="Close navigation menu"
-        >
+        <button class="nav__close" @click="closeMenu" aria-label="Close navigation menu">
           <i class="uil uil-times"></i>
         </button>
       </div>

@@ -1,7 +1,7 @@
 <template>
   <section class="home section" id="home">
     <div class="home__container container">
-      <div class="home__content grid">
+      <div class="home__content grid grid-cols-1! sm:grid-cols-[100px_1fr_1fr]!">
         <div class="home__social">
           <SocialLinks />
         </div>
