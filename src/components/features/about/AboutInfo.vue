@@ -56,7 +56,11 @@ onMounted(async () => {
       <p>{{ t('text.DateOfBirth') }}: {{ currentAge.dateOfBirth }}</p>
     </div>
 
-    <a download="" href="" class="button button--flex about__btn">
+    <a
+      download="Suphanat-Panyakom-Resume.pdf"
+      href="/Suphanat-Panyakom-Resume.pdf"
+      class="button button--flex about__btn"
+    >
       {{ t('text.DownloadCV') }}
       <span class="material-symbols-outlined">description</span>
     </a>
