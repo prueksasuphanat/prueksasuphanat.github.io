@@ -901,6 +901,20 @@ img {
   transition: transform 0.4s ease;
 }
 
+.portfolio__badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(255, 193, 7, 0.95);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 .portfolio__card:hover .portfolio__img {
   transform: scale(1.1);
 }

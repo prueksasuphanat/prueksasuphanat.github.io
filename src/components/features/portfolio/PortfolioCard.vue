@@ -1,12 +1,10 @@
 <template>
   <div class="portfolio__card">
     <div class="portfolio__img-wrapper">
-      <img
-        :src="project.image"
-        :alt="project.title"
-        loading="lazy"
-        class="portfolio__img"
-      />
+      <img :src="project.image" :alt="project.title" loading="lazy" class="portfolio__img" />
+      <div v-if="!project.isComplete" class="portfolio__badge">
+        {{ t('text.inDevelopment') }}
+      </div>
       <div class="portfolio__overlay">
         <div class="portfolio__links">
           <a
@@ -37,23 +35,15 @@
       <h3 class="portfolio__title">
         {{ project.title }}
       </h3>
-      
-      <span class="portfolio__year">{{ t(`text.${project.year}`) }}</span>
+
+      <span class="portfolio__year">{{ formatDate(project.year) }}</span>
 
       <p class="portfolio__description">
-        {{
-          project.description === 'ContentDemo4'
-            ? t('text.ContentDemo4')
-            : project.description
-        }}
+        {{ project.description === 'ContentDemo4' ? t('text.ContentDemo4') : project.description }}
       </p>
 
       <div class="portfolio__tech">
-        <span 
-          v-for="tech in project.technologies" 
-          :key="tech"
-          class="portfolio__tech-tag"
-        >
+        <span v-for="tech in project.technologies" :key="tech" class="portfolio__tech-tag">
           {{ tech }}
         </span>
       </div>
@@ -64,6 +54,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import type { Project } from '@/types'
+import { formatDate } from '@/utils/helpers/format'
 
 defineProps<{
   project: Project

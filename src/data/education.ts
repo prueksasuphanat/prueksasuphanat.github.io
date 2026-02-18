@@ -5,35 +5,35 @@ export const educationData: EducationItem[] = [
     id: 1,
     title: 'HighSchool',
     subtitle: 'PhadungPanya',
-    location: 'Tak, Thailand',
+    location: 'TakWithThai',
     period: {
-      start: 'y2008',
-      end: 'y2014',
+      start: '2008',
+      end: '2014',
     },
   },
   {
     id: 2,
     title: 'BEngFull',
     subtitle: 'IndustrialEng',
-    location: 'ChiangMai, University',
+    location: 'University',
     period: {
-      start: 'y2015',
-      end: 'y2019',
+      start: '2015',
+      end: '2019',
     },
   },
   {
     id: 3,
     title: 'MEngIEFull',
     subtitle: 'IndustrialEng',
-    location: 'ChiangMai, University',
+    location: 'University',
     period: {
-      start: 'y2019',
-      end: 'y2023',
+      start: '2019',
+      end: '2023',
     },
   },
   {
     id: 1,
-    title: 'Road to Frontend Developer Bootcamp #2',
+    title: 'OnlinCourse',
     subtitle: '',
     location: '',
     period: {
@@ -48,7 +48,7 @@ export const experienceData: ExperienceItem[] = [
     id: 2,
     title: 'IT-CAT Co.,Ltd',
     company: 'ChiangMai',
-    position: 'Frontend Dev',
+    position: 'Frontend Developer',
     period: {
       start: '2024-04-01',
       end: '2024-07-31',
@@ -58,7 +58,7 @@ export const experienceData: ExperienceItem[] = [
     id: 3,
     title: 'Wolves Corporation',
     company: 'ChiangMai',
-    position: 'Frontend Dev (1 month), Backend Dev',
+    position: 'Frontend Dev, Backend Dev',
     period: {
       start: '2024-08-01',
       end: '2024-12-31',

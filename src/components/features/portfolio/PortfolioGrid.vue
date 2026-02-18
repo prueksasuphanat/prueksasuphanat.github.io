@@ -1,13 +1,16 @@
 <template>
   <section class="portfolio section" id="portfolio">
     <h2 class="section__title">{{ t('text.Portfolio') }}</h2>
-    
+
     <!-- Category Filter -->
     <div class="portfolio__category-filters">
       <button
         v-for="category in categoryOptions"
         :key="category.value"
-        :class="['portfolio__filter-btn', { 'portfolio__filter-active': selectedCategory === category.value }]"
+        :class="[
+          'portfolio__filter-btn',
+          { 'portfolio__filter-active': selectedCategory === category.value },
+        ]"
         @click="selectedCategory = category.value"
         :aria-pressed="selectedCategory === category.value"
         :aria-label="t(category.label)"
@@ -29,11 +32,7 @@
     </div>
 
     <div class="portfolio__container container grid">
-      <PortfolioCard
-        v-for="project in filteredProjects"
-        :key="project.id"
-        :project="project"
-      />
+      <PortfolioCard v-for="project in filteredProjects" :key="project.id" :project="project" />
     </div>
   </section>
 </template>
@@ -54,7 +53,7 @@ const selectedCategory = ref<CategoryValue>('all')
 const categoryOptions = [
   { value: 'all' as const, label: 'portfolio.filter.all' },
   { value: 'practice' as const, label: 'portfolio.filter.practice' },
-  { value: 'production' as const, label: 'portfolio.filter.production' }
+  { value: 'production' as const, label: 'portfolio.filter.production' },
 ]
 
 // Technology filter state
@@ -74,22 +73,25 @@ const allTags = computed(() => {
   return Array.from(tags)
 })
 
-// Combined filter logic: apply category filter first, then technology filter
+// Combined filter logic: apply category filter first, then technology filter, then sort by year
 const filteredProjects = computed(() => {
   let result = projects
-  
+
   // Apply category filter first
   if (selectedCategory.value !== 'all') {
     result = result.filter(project => project.category === selectedCategory.value)
   }
-  
+
   // Then apply technology filter
   if (selectedTag.value !== 'All') {
-    result = result.filter(project => 
-      project.technologies.includes(selectedTag.value)
-    )
+    result = result.filter(project => project.technologies.includes(selectedTag.value))
   }
-  
-  return result
+
+  // Sort by year (latest first)
+  return result.sort((a, b) => {
+    const yearA = parseInt(a.year)
+    const yearB = parseInt(b.year)
+    return yearB - yearA
+  })
 })
 </script>

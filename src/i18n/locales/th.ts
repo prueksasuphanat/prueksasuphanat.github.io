@@ -34,6 +34,9 @@ export default {
     BEngFull: 'ปริญญาตรี วิศวกรรมศาสตร์',
     MEngIEFull: 'ปริญญาโท วิศวกรรมศาสตร์',
     IndustrialEng: 'อุตสาหการ',
+    TakWithThai: 'ตาก, ไทย',
+    CnxWithThai: 'เชียงใหม่, ไทย',
+
     y2008: '2551',
     y2014: '2554',
     y2015: '2555',
@@ -54,12 +57,17 @@ export default {
     Nov: 'พ.ย.',
     Dec: 'ธ.ค.',
     month: 'เดือน',
-    ProfileDescription:
-      'นักพัฒนา Frontend ที่หลงใหลในการสร้างเว็บแอปพลิเคชันที่สวยงามและใช้งานได้จริง',
+    ProfileDescription: `สวัสดีครับ ผมเป็น Full-stack Developer 
+
+ปัจจุบันผมกำลังท้าทายตัวเองด้วยการพัฒนา Personal Projects เพื่อประยุกต์ใช้เทคโนโลยีใหม่ๆ โดยตอนนี้กำลังศึกษา React, Next.js และการ AI Agents เข้ามาช่วยในการทำงานเพื่อให้งานเร็วและมีประสิทธิภาพมากขึ้น
+
+พื้นที่นี้คือ Portfolio และ Sandbox ที่ผมใช้บันทึกการเดินทางและอัปเดตผลงานล่าสุดครับ`,
     ContentAboutMe:
       'ผมอาศัยอยู่ที่จังหวัดเชียงใหม่ มีความสนใจในงาน frontend Developer และ backend Developer',
     ContentDemo4:
       'เว็บไซต์นี้ถูกสร้างขึ้นเพื่อฝึกฝนการใช้ Vue กับ TypeScript บนฝั่ง Frontend ในขณะที่ API ฝั่ง Backend ถูกพัฒนาด้วย PHP และมีระบบจัดการฐานข้อมูลเว็บไซต์ประกอบด้วยสองส่วน ได้แก่ Admin และ User Admin สามารถเข้าสู่ระบบด้วย ชื่อผู้ใช้: admin รหัสผ่าน: 123456 User สามารถเข้าสู่ระบบด้วย ชื่อผู้ใช้: user รหัสผ่าน: 123456',
+    inDevelopment: 'กำลังพัฒนา',
+    OnlinCourse: 'Road to Frontend Developer Bootcamp #2',
   },
   contact: {
     title: 'ติดต่อฉัน',
@@ -74,7 +82,7 @@ export default {
       messagePlaceholder: 'เขียนข้อความ',
       submit: 'ส่งข้อความ',
       sending: 'กำลังส่ง...',
-      success: 'ส่งข้อความสำเร็จ!',
+      success: '[TODO: ส่งข้อความสำเร็จ!]',
       error: 'ส่งข้อความไม่สำเร็จ กรุณาลองใหม่อีกครั้ง',
     },
     validation: {

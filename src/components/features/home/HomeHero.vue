@@ -7,20 +7,12 @@
         </div>
 
         <div class="home__img">
-          <img 
-            :src="profileImage" 
-            alt="Profile" 
-            class="home__img-element"
-          />
+          <img :src="profileImage" alt="Profile" class="home__img-element" />
         </div>
 
         <div class="home__data">
-          <h1 class="home__title">
-            {{ t('text.Hello') }}, {{ t('text.ImPruek') }} 👋
-          </h1>
-          <h3 class="home__subtitle">
-            {{ personalInfo.name.first }} {{ personalInfo.name.last }}
-          </h3>
+          <h1 class="home__title">{{ t('text.Hello') }}, {{ t('text.ImPruek') }} 👋</h1>
+          <h3 class="home__subtitle">{{ t('text.Suphanat') }} {{ t('text.Panyakom') }}</h3>
           <p class="home__description">
             {{ t('text.ProfileDescription') }}
           </p>
@@ -32,7 +24,6 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { personalInfo } from '@/data/about'
 import SocialLinks from '@/components/common/SocialLinks.vue'
 
 const { t } = useI18n()

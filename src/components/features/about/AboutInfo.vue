@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { personalInfo } from '@/data/about'
 import { usePersonalInfo, getGithubUserData } from '@/composables'
 
 interface ReposItem {
@@ -49,7 +48,7 @@ onMounted(async () => {
     </div>
 
     <div class="about__description">
-      <p>{{ personalInfo.name.first }} {{ personalInfo.name.last }}</p>
+      <p>{{ t('text.Suphanat') }} {{ t('text.Panyakom') }}</p>
       <p>
         {{ t('text.Age') }}: {{ currentAge.year }} {{ t('text.Year') }} {{ currentAge.month }}
         {{ t('text.Month') }}
