@@ -3,7 +3,7 @@ name: Deploy Vue to GitHub Pages
 on:
   # ทำงานเมื่อมีการ Push โค้ดเข้า Branch 'main'
   push:
-    branches: ["main"]
+    branches: ['main']
 
   # อนุญาตให้กดปุ่มรันเองได้จากหน้าเว็บ GitHub (เผื่ออยาก Deploy ซ้ำ)
   workflow_dispatch:
@@ -17,7 +17,7 @@ permissions:
 # ป้องกันการรันซ้อนกัน (Concurrency Control)
 # ถ้ามีการ push ถี่ๆ ระบบจะยกเลิกงานเก่าที่กำลังรันอยู่ แล้วรันงานล่าสุดแทน
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
@@ -39,11 +39,14 @@ jobs:
 
       - name: Build project
         run: npm run build # คำสั่ง Build ปกติของ Vue (Output จะอยู่ที่โฟลเดอร์ dist)
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' 
+          path: './dist'
 
   # งานส่วนที่ 2: Deploy (เอาขึ้นเว็บ)
   deploy:

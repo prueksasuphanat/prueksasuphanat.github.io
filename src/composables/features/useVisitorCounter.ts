@@ -53,15 +53,10 @@ export const useVisitorCounter = () => {
     try {
       isLoading.value = true
 
-      // Count distinct visitor_ids
-      const { count, error: countError } = await supabase
-        .from('page_views')
-        .select('visitor_id', { count: 'exact', head: false })
-
-      if (countError) throw countError
-
       // Get unique count by fetching all and counting unique visitor_ids
-      const { data } = await supabase.from('page_views').select('visitor_id')
+      const { data, error: fetchError } = await supabase.from('page_views').select('visitor_id')
+
+      if (fetchError) throw fetchError
 
       if (data) {
         const uniqueVisitors = new Set(data.map(item => item.visitor_id))
