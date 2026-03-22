@@ -72,7 +72,7 @@ export const projects: Project[] = [
       'A fan-made deck builder companion app for Slay the Spire 2, built with Vue 3 + TypeScript. Pulls real card data from the spire-codex.com API, letting players browse, filter, and build decks with a drag-and-drop interface. Features a community Deck Gallery where players can share and import decks across devices via Supabase — no login required. Key features: Real-time card search with debounced API filtering, drag-and-drop deck builder, dark/light theme, fully responsive, deck sharing via URL or public gallery.',
     technologies: ['Frontend', 'Vue', 'Supabase', 'Tailwind CSS', 'Pinia'],
     category: 'production',
-    image: '/images/todolist.png',
+    image: '/images/demo-deck-forge.png',
     githubUrl: 'https://github.com/prueksasuphanat/sots2-deck-builder.git',
     demoUrl: 'https://sots2-deck-builder.vercel.app/deck-builder',
     year: '2026',
