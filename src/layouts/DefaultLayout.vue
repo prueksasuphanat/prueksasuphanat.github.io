@@ -15,6 +15,7 @@
         <span v-else class="font-semibold text-blue-500">{{ visitorCount.toLocaleString() }}</span>
       </div>
     </div>
+    5
     <TheFooter />
   </div>
 </template>

@@ -5,9 +5,11 @@
     @click="handleCardClick"
     @keydown.enter="handleCardClick"
     @keydown.space.prevent="handleCardClick"
+    @mouseenter="startImageRotation"
+    @mouseleave="stopImageRotation"
   >
     <div class="portfolio__img-wrapper">
-      <img :src="project.image" :alt="project.title" loading="lazy" class="portfolio__img" />
+      <img :src="currentImage" :alt="project.title" loading="lazy" class="portfolio__img" />
       <div v-if="!project.isComplete" class="portfolio__badge">
         {{ t('text.inDevelopment') }}
       </div>
@@ -62,19 +64,57 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Project } from '@/types'
 import { formatDate } from '@/utils/helpers/format'
 
-defineProps<{
+const props = defineProps<{
   project: Project
 }>()
 
 const { t } = useI18n()
 const isActive = ref(false)
+const currentImageIndex = ref(0)
+let rotationInterval: number | null = null
+
+// Get current image based on whether it's an array or single string
+const currentImage = computed(() => {
+  if (Array.isArray(props.project.image)) {
+    return props.project.image[currentImageIndex.value]
+  }
+  return props.project.image
+})
+
+// Check if project has multiple images
+const hasMultipleImages = computed(() => {
+  return Array.isArray(props.project.image) && props.project.image.length > 1
+})
 
 const handleCardClick = () => {
   isActive.value = !isActive.value
 }
+
+const startImageRotation = () => {
+  if (!hasMultipleImages.value) return
+
+  rotationInterval = window.setInterval(() => {
+    if (Array.isArray(props.project.image)) {
+      currentImageIndex.value = (currentImageIndex.value + 1) % props.project.image.length
+      console.log('Image rotated to index:', currentImageIndex.value)
+    }
+  }, 1000)
+}
+
+const stopImageRotation = () => {
+  if (rotationInterval) {
+    clearInterval(rotationInterval)
+    rotationInterval = null
+  }
+  currentImageIndex.value = 0 // รีเซ็ตกลับไปรูปแรก
+}
+
+onUnmounted(() => {
+  stopImageRotation()
+})
 </script>

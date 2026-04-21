@@ -4,7 +4,7 @@ export interface Project {
   description: string
   technologies: string[]
   category: 'practice' | 'production'
-  image: string
+  image: string | string[]
   githubUrl?: string
   demoUrl?: string
   year: string

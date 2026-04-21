@@ -1008,6 +1008,7 @@ img {
   line-height: 1.6;
   margin: 0;
   flex-grow: 1;
+  white-space: pre-line;
 }
 
 .portfolio__tech {
