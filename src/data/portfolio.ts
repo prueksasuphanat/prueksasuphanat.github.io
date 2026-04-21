@@ -84,7 +84,7 @@ export const projects: Project[] = [
     description:
       'Pharmacy e-commerce + admin backoffice system.\n\nDemo credentials:\nUsername: demouser\nPassword: demo1234',
     technologies: ['Frontend', 'Backend', 'Vue', 'Node.js', 'Tailwind CSS', 'Pinia'],
-    category: 'practice',
+    category: 'production',
     image: ['/images/demo-phanadrug-1.png', '/images/demo-phanadrug-2.png'],
     githubUrl: '',
     demoUrl: 'https://phanadrug.com/',
